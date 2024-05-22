@@ -4,7 +4,8 @@
 
 html,
 body {
-  height: 100vh;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 *,
@@ -13,10 +14,7 @@ body {
   box-sizing: border-box;
 }
 
-/* 
-R (0)
-G (110)
-B (255 */
+/* Additional styles for color and theme settings */
 
 @layer base {
   :root {
@@ -52,12 +50,7 @@ B (255 */
   }
 
   .dark {
-    /* Name: custom color palette
-       Author: Ilias Ism
-       URL: https://gradient.page */
-
-    /* CSS: .bg-gradient { background: var(--gradient) } */
-    --gradient: linear-gradient(to top left,#091E3A,#2F80ED,#2D9EE0)
+    --gradient: linear-gradient(to top left, #007adf, #00ecbc);
 
     --background: 220 65% 3.52%;
     --foreground: 220 10% 97.2%;
@@ -113,7 +106,6 @@ B (255 */
     opacity: 0;
     transform: scale(0.95);
   }
-
   100% {
     opacity: 1;
     transform: scale(1);

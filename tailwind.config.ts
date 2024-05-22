@@ -1,14 +1,14 @@
 import { withUt } from 'uploadthing/tw'
 import colors from 'tailwindcss/colors'
 
-export default withUt({
+module.exports = withUt({
   darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-    './node_modules/@tremor/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@tremor/**/*.{js,ts,jsx,tsx}', // Tremor module
   ],
   theme: {
     container: {
