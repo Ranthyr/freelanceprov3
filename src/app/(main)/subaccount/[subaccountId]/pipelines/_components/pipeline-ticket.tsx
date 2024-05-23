@@ -231,7 +231,7 @@ const PipelineTicket = ({
                       {!!ticket.value &&
                         new Intl.NumberFormat(undefined, {
                           style: 'currency',
-                          currency: 'USD',
+                          currency: 'EUR',
                         }).format(+ticket.value)}
                     </span>
                   </CardFooter>

@@ -1,5 +1,5 @@
-import { withUt } from 'uploadthing/tw'
-import colors from 'tailwindcss/colors'
+import { withUt } from 'uploadthing/tw';
+import colors from 'tailwindcss/colors';
 
 module.exports = withUt({
   darkMode: ['class'],
@@ -8,7 +8,7 @@ module.exports = withUt({
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-    './node_modules/@tremor/**/*.{js,ts,jsx,tsx}', // Tremor module
+    './node_modules/@tremor/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     container: {
@@ -22,11 +22,11 @@ module.exports = withUt({
       colors: {
         tremor: {
           brand: {
-            faint: colors.blue[50],
-            muted: colors.blue[200],
-            subtle: colors.blue[400],
-            DEFAULT: colors.blue[500],
-            emphasis: colors.blue[700],
+            faint: colors.purple[50],
+            muted: colors.purple[200],
+            subtle: colors.purple[400],
+            DEFAULT: colors.purple[500],
+            emphasis: colors.purple[600],
             inverted: colors.white,
           },
           background: {
@@ -52,11 +52,11 @@ module.exports = withUt({
         'dark-tremor': {
           brand: {
             faint: '#0B1229',
-            muted: colors.blue[950],
-            subtle: colors.blue[800],
-            DEFAULT: colors.blue[500],
-            emphasis: colors.blue[400],
-            inverted: colors.blue[950],
+            muted: colors.purple[950],
+            subtle: colors.purple[800],
+            DEFAULT: colors.purple[500],
+            emphasis: colors.purple[400],
+            inverted: colors.purple[950],
           },
           background: {
             muted: '#131A2B',
@@ -79,18 +79,12 @@ module.exports = withUt({
           },
         },
         boxShadow: {
-          // light
           'tremor-input': '0 1px 2px 0 rgb(0 0 0 / 0.05)',
-          'tremor-card':
-            '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-          'tremor-dropdown':
-            '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
-          // dark
+          'tremor-card': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+          'tremor-dropdown': '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
           'dark-tremor-input': '0 1px 2px 0 rgb(0 0 0 / 0.05)',
-          'dark-tremor-card':
-            '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-          'dark-tremor-dropdown':
-            '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
+          'dark-tremor-card': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+          'dark-tremor-dropdown': '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
         },
         borderRadius: {
           'tremor-small': '0.375rem',
@@ -147,7 +141,7 @@ module.exports = withUt({
         },
         'automation-zoom-in': {
           '0%': { transform: 'translateY(-30px) scale(0.2)' },
-          '100%': { transform: 'transform: translateY(0px) scale(1)' },
+          '100%': { transform: 'translateY(0px) scale(1)' },
         },
       },
       animation: {
@@ -187,4 +181,4 @@ module.exports = withUt({
     },
   ],
   plugins: [require('tailwindcss-animate')],
-})
+});

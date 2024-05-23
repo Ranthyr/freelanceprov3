@@ -51,7 +51,7 @@ const PipelineView = ({
   const handleAddLane = () => {
     setOpen(
       <CustomModal
-        title=" Create A Lane"
+        title="Create A Lane"
         subheading="Lanes allow you to group tickets"
       >
         <LaneForm pipelineId={pipelineId} />
@@ -148,7 +148,7 @@ const PipelineView = ({
         <Droppable droppableId="lanes" type="lane" direction="horizontal" key="lanes">
           {(provided) => (
             <div
-              className="flex items-center gap-x-2 overflow-auto"
+              className="flex item-center gap-x-2 overflow-auto"
               {...provided.droppableProps}
               ref={provided.innerRef}
             >

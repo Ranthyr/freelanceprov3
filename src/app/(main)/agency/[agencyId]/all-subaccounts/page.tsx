@@ -45,8 +45,7 @@ const AllSubaccountsPage = async ({ params }: Props) => {
         />
         <Command className="rounded-lg bg-transparent">
           <CommandInput placeholder="Search Account..." />
-          <CommandList>
-            <CommandEmpty>No Results Found.</CommandEmpty>
+          <CommandList className="max-h-[500px] overflow-y-auto">
             <CommandGroup heading="Sub Accounts">
               {!!user.Agency?.SubAccount.length ? (
                 user.Agency.SubAccount.map((subaccount: SubAccount) => (
@@ -68,7 +67,9 @@ const AllSubaccountsPage = async ({ params }: Props) => {
                       </div>
                       <div className="flex flex-col justify-between">
                         <div className="flex flex-col">
-                          {subaccount.name}
+                          <span className="text-foreground">
+                            {subaccount.name}
+                          </span>
                           <span className="text-muted-foreground text-xs">
                             {subaccount.address}
                           </span>
@@ -90,7 +91,7 @@ const AllSubaccountsPage = async ({ params }: Props) => {
                           Are your absolutely sure
                         </AlertDialogTitle>
                         <AlertDescription className="text-left">
-                          This action cannot be undon. This will delete the
+                          This action cannot be undone. This will delete the
                           subaccount and all data related to the subaccount.
                         </AlertDescription>
                       </AlertDialogHeader>

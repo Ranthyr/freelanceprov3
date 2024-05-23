@@ -27,7 +27,6 @@ const MediaComponent = ({ data, subaccountId }: Props) => {
       <Command className="bg-transparent">
         <CommandInput placeholder="Search for file name..." />
         <CommandList className="pb-40 max-h-full ">
-          <CommandEmpty>No Media Files</CommandEmpty>
           <CommandGroup heading="Media Files">
             <div className="flex flex-wrap gap-4 pt-4">
               {data?.Media.map((file) => (

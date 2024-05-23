@@ -35,7 +35,7 @@ type Props = {
 }
 
 const SubaccountPageId = async ({ params, searchParams }: Props) => {
-  let currency = 'USD'
+  let currency = 'EUR'
   let sessions: Stripe.Checkout.Session[] = []
   let totalClosedSessions: Stripe.Checkout.Session[] = []
   let totalPendingSessions: Stripe.Checkout.Session[] = []
@@ -59,7 +59,7 @@ const SubaccountPageId = async ({ params, searchParams }: Props) => {
     const response = await stripe.accounts.retrieve({
       stripeAccount: subaccountDetails.connectAccountId,
     })
-    currency = response.default_currency?.toUpperCase() || 'USD'
+    currency = response.default_currency?.toUpperCase() || 'EUR'
     const checkoutSessions = await stripe.checkout.sessions.list(
       { created: { gte: startDate, lte: endDate }, limit: 100 },
       {
@@ -120,7 +120,7 @@ const SubaccountPageId = async ({ params, searchParams }: Props) => {
                 </CardDescription>
                 <Link
                   href={`/subaccount/${subaccountDetails.id}/launchpad`}
-                  className="p-2 w-fit bg-secondary text-white rounded-md flex items-center gap-2"
+                  className="p-2 w-fit bg-primary text-white rounded-md flex items-center gap-2"
                 >
                   <ClipboardIcon />
                   Launch Pad
@@ -231,7 +231,7 @@ const SubaccountPageId = async ({ params, searchParams }: Props) => {
             </Card>
           </div>
           <div className="flex gap-4 xl:!flex-row flex-col">
-            <Card className="p-4 flex-1 h-[450px] overflow-scroll relative">
+            <Card className="p-4 flex-1 h-[450px] relative">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   Transition History

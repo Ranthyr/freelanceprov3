@@ -125,7 +125,6 @@ const SubAccountDetails: React.FC<SubAccountDetailsProps> = ({
   }, [details])
 
   const isLoading = form.formState.isSubmitting
-  //CHALLENGE Create this form.
   return (
     <Card className="w-full">
       <CardHeader>
@@ -136,7 +135,7 @@ const SubAccountDetails: React.FC<SubAccountDetailsProps> = ({
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="space-y-4"
+            className="space-y-3"
           >
             <FormField
               disabled={isLoading}

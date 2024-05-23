@@ -58,7 +58,7 @@ const Page = async ({
       stripeAccount: agencyDetails.connectAccountId,
     })
 
-    currency = response.default_currency?.toUpperCase() || 'USD'
+    currency = response.default_currency?.toUpperCase() || 'EUR'
     const checkoutSessions = await stripe.checkout.sessions.list(
       {
         created: { gte: startDate, lte: endDate },
@@ -108,7 +108,7 @@ const Page = async ({
               </CardDescription>
               <Link
                 href={`/agency/${agencyDetails.id}/launchpad`}
-                className="p-2 w-fit bg-secondary text-white rounded-md flex items-center gap-2"
+                className="p-2 w-fit bg-primary text-white rounded-md flex items-center gap-2"
               >
                 <ClipboardIcon />
                 Launch Pad
